@@ -1,13 +1,6 @@
 
 'use client';
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
-import Paper from '@mui/material/Paper';
-import { Button } from '@mui/material';
+import { Button, Table,TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Chip } from '@mui/material';
 import { getProducts } from '../lib/api';
 import { Product } from '../types';
 import { useEffect, useState } from 'react';
@@ -52,7 +45,7 @@ const ProductTable: React.FC = (searchParams) => {
                   {product.name}
                 </TableCell>
                 <TableCell align="right">{product.price}</TableCell>
-                <TableCell align="right">{product.isAvailable ? "En stock" : "Sin stock"}</TableCell>
+                <TableCell align="right">{product.isAvailable ? <Chip label="En stock" color="success" /> : <Chip label="Sin stock" /> }</TableCell>
                 <TableCell align="right">{product.category}</TableCell>
                 <TableCell align="right">
                   <Button onClick={() => handlerButton(product)} variant="contained" color="primary">
