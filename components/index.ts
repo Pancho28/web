@@ -1,2 +1,4 @@
 export {default as ProductCard} from './ProductCard';
-export {default as ProductTable} from './ProductTable';
+export {default as ProductGrid} from './ProductGrid';
+export {Header} from './Header';
+export {Footer} from './Footer';
