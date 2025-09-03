@@ -2,7 +2,6 @@
 import { useState } from 'react';
 import { Card, CardContent, Typography, IconButton, Tooltip } from '@mui/material';
 import Image from 'next/image';
-import a from "./image/ac.jpg";
 import { Product } from "../types";
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';

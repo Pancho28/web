@@ -1,10 +1,7 @@
-import productsData from './products.json';
-
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE || 'http://localhost:3001';
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE;
 
 export async function getProducts(params?: URLSearchParams) {
   try {
-    //return productsData;
     const url = `${API_BASE_URL}/api/v1/products?${params?.toString() || ''}`;
     console.log("Fetching products from:", url);
     const response = await fetch(url, {
@@ -23,7 +20,6 @@ export async function getProducts(params?: URLSearchParams) {
 
 export async function getProductById(id: string) {
   try {
-    //return productsData.find(product => product.id === id) || null;
     const url = `${API_BASE_URL}/api/v1/products/${id}`;
     const response = await fetch(url);
     if (!response.ok) {
